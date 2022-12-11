@@ -1,0 +1,43 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Password Validation</title>
+
+    <link rel="stylesheet" href="src/style.css">
+</head>
+<body>
+    <form>
+        <div class="user">
+            <input type="text" id="username" placeholder="Enter username">
+        </div>
+        <div class="user" id="view_password">
+            <input type="password" id="password" placeholder="Enter password" oninput="check()">
+            <span id="view" onclick="viewPassword()">show</span>
+        </div>
+
+        <div class="errors">
+            <ul>
+                <li id="upper">Atleast one uppercase</li>
+                <li id="lower">Atleast one lowercase</li>
+                <li id="specil_char">Atleast one special symbol (@, !, #, $, %, &, *)</li>
+                <li id="number">Atleast one number</li>
+                <li id="length">Atleast 8 characters</li>
+            </ul>
+        </div>
+        
+        <div class="user">
+            <input type="password" id="confirm" placeholder="Confirm password" oninput="validate()">
+        </div>
+
+        <button id="button">Sign Up</button>
+
+        
+    </form>
+
+
+
+    <script src="src/script.js"></script>
+</body>
+</html>
